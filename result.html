@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador de texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script src="scriptResult.js"></script>
+
+<body>
+    <header>
+        <h1 class="titulo">Codificador de texto</h1>
+        <nav class="menu">
+            <a class="menu__link" href="index.html">Home</a>
+            <a class="menu__link" href="about.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="entrada">
+            <textarea id="inputField" class="entrada__input" placeholder="Digite seu texto..."
+                spellcheck="false"></textarea>
+
+            <div class="entrada__meio">
+                <button id="botao__limpar" class="botao_extra" onclick="limparEntrada()">Limpar</button>
+                <button id="botao__colar" class="botao_extra" onclick="colarClipboard()">Colar</button>
+                <button id="botao__norma" class="botao_extra" onclick="normalizarEntrada()">Normalizar</button>
+            </div>
+
+            <div class="entrada__fundo">
+                <div class="entrada__fundo__alerta">
+                    <p id="texto-de-alerta" class="entrada__fundo__texto">Use apenas letras minúsculas sem acentos.</p>
+                </div>
+                <div class="entrada__fundo__botoes">
+                    <button id="botao1" class="entrada__fundo__botoes__1"
+                        onclick="ativarBotaoCriptografar()">Criptografar</button>
+                    <button id="botao2" class="entrada__fundo__botoes__2"
+                        onclick="ativarBotaoDescriptografar()">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="saida">
+            <div class="saida__resultado">
+                <p id="resposta_resultado" class="saida__resultado__texto"></p>
+            </div>
+            <div class="saida__botao">
+                <button id="botao3" class="saida__botao__copiar" onclick="copiarMensagem()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
