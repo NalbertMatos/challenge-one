@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const botao1 = document.getElementById('botao1');
     const botao2 = document.getElementById('botao2');
     const botaoLimpar = document.getElementById('botao__limpar');
+    const botaoNormal = document.getElementById('botao__normal');
     const specialCharacters = /[À-ÿA-Z]/g;
 
-    desativarBotoes();
-    botaoLimpar.classList.add('button__escondido');
+    //desativarBotoes();
+    //botaoLimpar.classList.add('button__escondido');
+    //botaoNormal.classList.add('button__escondido');
+
+    verificadorEntrada()
+
     inputField.addEventListener('input', verificadorEntrada);
 
     function verificadorEntrada() {
@@ -17,26 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
             txtAlerta.classList.add('texto_alerta');
             desativarBotoes();
             botaoLimpar.classList.remove('button__escondido');
+            botaoNormal.classList.remove('button__escondido');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caraceres inválidos.'
         } else if (valorEntrada === '') {
             desativarBotoes();
             botaoLimpar.classList.add('button__escondido');
+            botaoNormal.classList.add('button__escondido');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.'
         } else {
-            txtAlerta.classList.remove('texto_alerta');
             ativarBotoes();
             botaoLimpar.classList.remove('button__escondido');
+            botaoNormal.classList.add('button__escondido');
+            txtAlerta.classList.remove('texto_alerta');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.'
         }
     }
 
     function ativarBotoes() {
-        //botao1.disabled = false;
-        //botao2.disabled = false;
         botao1.classList.remove('button__desativado');
         botao2.classList.remove('button__desativado');
     }
 
     function desativarBotoes() {
-        //botao1.disabled = true;
-        //botao2.disabled = true;
         botao1.classList.add('button__desativado');
         botao2.classList.add('button__desativado');
     }

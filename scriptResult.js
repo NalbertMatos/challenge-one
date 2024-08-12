@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botao1 = document.getElementById('botao1');
     const botao2 = document.getElementById('botao2');
     const botaoLimpar = document.getElementById('botao__limpar');
+    const botaoNormal = document.getElementById('botao__normal');
     const respostaResultado = document.getElementById('resposta_resultado');
     const specialCharacters = /[À-ÿA-Z]/g;
 
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             respostaResultado.innerText = 'Digite uma mensagem para ser criptografada ou descriptografada!';
         }
 
+        verificadorEntrada();
+
         localStorage.setItem('acionamento', '');
         localStorage.setItem('text', '');
     }
@@ -40,11 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (specialCharacters.test(valorEntrada)) {
             txtAlerta.classList.add('texto_alerta');
             desativarBotoes();
+            botaoLimpar.classList.remove('button__escondido');
+            botaoNormal.classList.remove('button__escondido');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caraceres inválidos.'
         } else if (valorEntrada === '') {
             desativarBotoes();
+            botaoLimpar.classList.add('button__escondido');
+            botaoNormal.classList.add('button__escondido');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.'
         } else {
-            txtAlerta.classList.remove('texto_alerta');
             ativarBotoes();
+            botaoLimpar.classList.remove('button__escondido');
+            botaoNormal.classList.add('button__escondido');
+            txtAlerta.classList.remove('texto_alerta');
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.'
         }
     }
 
