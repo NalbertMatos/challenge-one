@@ -5,13 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const botao2 = document.getElementById('botao2');
     const botaoLimpar = document.getElementById('botao__limpar');
     const botaoNormal = document.getElementById('botao__normal');
-    const specialCharacters = /[À-ÿA-Z]/g;
+    const specialCharacters = /[À-ÿA-Z]/;
 
-    //desativarBotoes();
-    //botaoLimpar.classList.add('button__escondido');
-    //botaoNormal.classList.add('button__escondido');
-
-    verificadorEntrada()
+    verificadorEntrada();
 
     inputField.addEventListener('input', verificadorEntrada);
 
@@ -39,11 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function ativarBotoes() {
+        botao1.disabled = false;
+        botao2.disabled = false;
         botao1.classList.remove('button__desativado');
         botao2.classList.remove('button__desativado');
     }
 
     function desativarBotoes() {
+        botao1.disabled = true;
+        botao2.disabled = true;
         botao1.classList.add('button__desativado');
         botao2.classList.add('button__desativado');
     }

@@ -1,15 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+    font-family: 'marsek';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./fonts/marsek.ttf') format('woff'),
+  }
+
+  @font-face {
+    font-family: 'davinci';
+    font-style: normal;
+    src: local(''),
+        url('./fonts/da-vinci/P22 Da Vinci Forward.ttf') format('woff'),
+  }
+
+  @font-face {
+    font-family: 'pharellia';
+    font-style: normal;
+    src: local(''),
+        url('./fonts/Pharellia Redusha.otf') format('woff'),
+  }
+
+
 
 :root {
-    --cor-primaria: #005C78;
+    --cor-primaria: #0C1844;
     --cor-secundaria: #FDF7FA;
-    --cor-terciaria: #17132A;
+    --cor-terciaria: #C80036;
+    
     --cor-hover: #06142E;
     --cor-sombra: #d4d4d4;
     --cor-bordas: #E88D67;
 
-    --fonte-primaria: "Quicksand", sans-serif;
-    --fonte-secundaria: "Archivo", sans-serif;
+    --fonte-primaria: "Nunito", sans-serif;
+    --fonte-secundaria: "marsek";
 }
 
 * {
@@ -33,6 +58,8 @@ header {
 }
 
 .titulo {
+    display: flex;
+    align-items: center;
     height: 70%;
     font-size: 60px;
     font-family: var(--fonte-secundaria);
@@ -48,11 +75,12 @@ header {
     font-size: 20px;
     color: var(--cor-terciaria);
     text-decoration: none;
+    font-family: var(--fonte-secundaria);
 }
 
 main {
     width: 100%;
-    height: 85%;
+    height: 70%;
     display: flex;
     flex-direction: column;
 }
@@ -60,7 +88,7 @@ main {
 .sobre {
     margin: 2% 5% 2% 5%;
     display: flex;
-    height: 74%;
+    height: 100%;
     width: 90%;
     gap: 10%;
 }
@@ -75,7 +103,7 @@ main {
 
 h2 {
     text-align: center;
-    padding-top: 7%;
+    padding: 4% 0% 4% 0%;
 }
 
 .sobre__assets {
@@ -97,6 +125,7 @@ h2 {
     width: 80%;
     display: flex;
     gap: 10%;
+    font-family: 'marsek';
 }
 
 .sobre__assets__botoes_coluna {
@@ -113,19 +142,31 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: var(--cor-terciaria);
-    color: var(--cor-bordas);
+    color: var(--cor-primaria);
     width: 100%;
     height: 45%;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     gap: 2px;
     cursor: pointer;
 }
 
-.referencia {
-    display: flex;
-    height: 22%;
-    margin: 0 5% 0 5%;
-    width: 90%;
+.botoes__links:hover{
+
+    border: 4px solid var(--cor-secundaria);
+}
+
+.citacao{
+    font-family: "pharellia", cursive;
+    font-style: normal;
+    font-size: 28px;
+}
+
+footer{
+    
+    height: 15%;
+    width: 100%;
+    background-color: var(--cor-terciaria);
+
 }

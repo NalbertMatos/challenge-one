@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const botao1 = document.getElementById('botao1');
     const botao2 = document.getElementById('botao2');
     const botaoLimpar = document.getElementById('botao__limpar');
+    const botaoColar = document.getElementById('botao__colar');
     const botaoNormal = document.getElementById('botao__normal');
     const respostaResultado = document.getElementById('resposta_resultado');
-    const specialCharacters = /[À-ÿA-Z]/g;
+    const specialCharacters = /[À-ÿA-Z]/;
 
-    // Carrega as configurações iniciais
     carregarConfiguracoes();
 
     inputField.addEventListener('input', verificadorEntrada);
@@ -61,15 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function ativarBotoes() {
+        botao1.disabled = false;
+        botao2.disabled = false;
         botao1.classList.remove('button__desativado');
         botao2.classList.remove('button__desativado');
-        botaoLimpar.classList.remove('button__escondido');
     }
 
     function desativarBotoes() {
+        botao1.disabled = true;
+        botao2.disabled = true;
         botao1.classList.add('button__desativado');
         botao2.classList.add('button__desativado');
-        botaoLimpar.classList.add('button__escondido');
     }
 
     // Função para criptografar
