@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoNormal = document.getElementById('botao__normal');
     const specialCharacters = /[À-ÿA-Z]/;
 
-    verificadorEntrada();
-
-    inputField.addEventListener('input', verificadorEntrada);
-
     function verificadorEntrada() {
         const valorEntrada = inputField.value;
 
@@ -19,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desativarBotoes();
             botaoLimpar.classList.remove('button__escondido');
             botaoNormal.classList.remove('button__escondido');
-            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caraceres inválidos.'
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caracteres inválidos.'
         } else if (valorEntrada === '') {
             desativarBotoes();
             botaoLimpar.classList.add('button__escondido');
@@ -48,38 +44,37 @@ document.addEventListener('DOMContentLoaded', () => {
         botao2.classList.add('button__desativado');
     }
 
-    // Função para limpar o campo de entrada
-    function limparEntrada() {
-        inputField.value = "";
-        verificadorEntrada();
-    }
+    verificadorEntrada();
 
-    // Função para colar texto do clipboard
-    function colarClipboard() {
-        navigator.clipboard.readText().then((clipText) => {
-            inputField.value = clipText;
-            verificadorEntrada();
-        });
-    }
+    inputField.addEventListener('input', verificadorEntrada);
 
-    function normalizarEntrada() {
-        inputField.value = inputField.value
-            .normalize('NFD')              // Normaliza para forma decompositiva
-            .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-            .toLowerCase();               // Converte para minúsculas
-        verificadorEntrada();
-    }
-
-    function redirecionar(func_tipo) {
-        localStorage.setItem('text', inputField.value);
-        localStorage.setItem('acionamento', func_tipo);
-        window.location.href = 'result.html';
-    };
-
-    // Expondo funções globalmente se necessário
-    window.limparEntrada = limparEntrada;
-    window.colarClipboard = colarClipboard;
-    window.normalizarEntrada = normalizarEntrada;
-    window.redirecionar = redirecionar;
+    window.verificadorEntrada = verificadorEntrada;
 });
 
+// Função para limpar o campo de entrada
+function limparEntrada() {
+    inputField.value = "";
+    verificadorEntrada();
+}
+
+// Função para colar texto do clipboard
+function colarClipboard() {
+    navigator.clipboard.readText().then((clipText) => {
+        inputField.value += clipText;
+        verificadorEntrada();
+    });
+}
+
+function normalizarEntrada() {
+    inputField.value = inputField.value
+        .normalize('NFD')              
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();         
+    verificadorEntrada();
+}
+
+function redirecionar(func_tipo) {
+    localStorage.setItem('text', inputField.value);
+    localStorage.setItem('acionamento', func_tipo);
+    window.location.href = 'result.html';
+};

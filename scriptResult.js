@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const botao1 = document.getElementById('botao1');
     const botao2 = document.getElementById('botao2');
     const botaoLimpar = document.getElementById('botao__limpar');
-    const botaoColar = document.getElementById('botao__colar');
     const botaoNormal = document.getElementById('botao__normal');
     const respostaResultado = document.getElementById('resposta_resultado');
     const specialCharacters = /[À-ÿA-Z]/;
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desativarBotoes();
             botaoLimpar.classList.remove('button__escondido');
             botaoNormal.classList.remove('button__escondido');
-            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caraceres inválidos.'
+            txtAlerta.innerHTML = 'Use apenas letras minúsculas sem acentos.<br>Você pode usar o botão normalizar para converter caracteres inválidos.'
         } else if (valorEntrada === '') {
             desativarBotoes();
             botaoLimpar.classList.add('button__escondido');
@@ -117,39 +116,33 @@ document.addEventListener('DOMContentLoaded', () => {
         respostaResultado.innerText = texto;
     }
 
-    // Função para copiar a mensagem
     function copiarMensagem() {
         const copyText = respostaResultado.innerText;
         navigator.clipboard.writeText(copyText);
     }
 
-    // Função para limpar o campo de entrada
-    function limparEntrada() {
-        inputField.value = "";
-        verificadorEntrada();
-    }
-
-    // Função para colar texto do clipboard
-    function colarClipboard() {
-        navigator.clipboard.readText().then((clipText) => {
-            inputField.value = clipText;
-            verificadorEntrada();
-        });
-    }
-
-    function normalizarEntrada() {
-        inputField.value = inputField.value
-            .normalize('NFD')              // Normaliza para forma decompositiva
-            .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-            .toLowerCase();               // Converte para minúsculas
-        verificadorEntrada();
-    }
-
-    // Expondo funções globalmente se necessário
+    window.verificadorEntrada = verificadorEntrada;
+    window.copiarMensagem = copiarMensagem;
     window.ativarBotaoCriptografar = ativarBotaoCriptografar;
     window.ativarBotaoDescriptografar = ativarBotaoDescriptografar;
-    window.copiarMensagem = copiarMensagem;
-    window.limparEntrada = limparEntrada;
-    window.colarClipboard = colarClipboard;
-    window.normalizarEntrada = normalizarEntrada;
 });
+
+function limparEntrada() {
+    inputField.value = "";
+    verificadorEntrada();
+}
+
+function colarClipboard() {
+    navigator.clipboard.readText().then((clipText) => {
+        inputField.value += clipText;
+        verificadorEntrada();
+    });
+}
+
+function normalizarEntrada() {
+    inputField.value = inputField.value
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    verificadorEntrada();
+}

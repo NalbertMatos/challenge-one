@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @font-face {
     font-family: 'marsek';
@@ -8,30 +8,10 @@
         url('./fonts/marsek.ttf') format('woff'),
   }
 
-  @font-face {
-    font-family: 'adca';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-        url('./fonts/adca.ttf') format('woff'),
-  }
-
-  @font-face {
-      font-family: 'kenfolg';
-      font-style: normal;
-      font-weight: 400;
-      src: local(''),
-          url('./fonts/kenfolg.otf') format('woff'),
-    }
-
 :root {
     --cor-primaria: #0C1844;
     --cor-secundaria: #FDF7FA;
-    --cor-terciaria: #C80036;
-    
-    --cor-hover: #06142E;
-    --cor-sombra: #d4d4d4;
-    --cor-bordas: #E88D67;
+    --cor-terciaria: #ea3d27;
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
@@ -119,7 +99,7 @@ main {
 }
 
 .entrada__input:hover {
-    filter: brightness(105%);
+    filter: brightness(110%);
 }
 
 .entrada__meio {
@@ -133,7 +113,7 @@ main {
 .botao_extra{
     border-radius: 8px;
     height: 40%;
-    width: 15%;
+    width: 20%;
     font-size: 16px;
 }
 
@@ -251,11 +231,6 @@ button {
     visibility: hidden;
 }
 
-.error {
-    text-decoration: underline;
-    text-decoration-color: var(--cor-bordas);
-}
-
 .saida__resultado {
     display: flex;
     align-items: center;
@@ -271,6 +246,8 @@ button {
     width: 100%;
     padding: 5%;
     text-align: justify;
+    overflow-wrap: break-word;
+    font-size: 20px;
 }
 
 .saida__botao {
@@ -286,14 +263,4 @@ button {
     box-sizing: border-box;
     height: 36%;
     width: 35%;
-}
-
-@media (max-width: 1400px) {
-    .saida__titulo {
-        font-size: 24px;
-    }
-
-    .saida__texto {
-        font-size: 16px;
-    }
 }

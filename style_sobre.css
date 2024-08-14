@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @font-face {
     font-family: 'marsek';
@@ -9,29 +9,16 @@
   }
 
   @font-face {
-    font-family: 'davinci';
-    font-style: normal;
-    src: local(''),
-        url('./fonts/da-vinci/P22 Da Vinci Forward.ttf') format('woff'),
-  }
-
-  @font-face {
     font-family: 'pharellia';
     font-style: normal;
     src: local(''),
         url('./fonts/Pharellia Redusha.otf') format('woff'),
   }
 
-
-
 :root {
     --cor-primaria: #0C1844;
     --cor-secundaria: #FDF7FA;
-    --cor-terciaria: #C80036;
-    
-    --cor-hover: #06142E;
-    --cor-sombra: #d4d4d4;
-    --cor-bordas: #E88D67;
+    --cor-terciaria: #ea3d27;
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
@@ -146,7 +133,7 @@ h2 {
     width: 100%;
     height: 45%;
     border-radius: 16px;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     gap: 2px;
     cursor: pointer;
@@ -167,6 +154,6 @@ footer{
     
     height: 15%;
     width: 100%;
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
 
 }
