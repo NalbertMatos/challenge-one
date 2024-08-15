@@ -51,7 +51,7 @@
   Concatena o conteúdo da área de transferência (clipboard), se for um texto ou puder ser representado como tal, ao conteúdo presente na área de entrada.
 </p>
 
-:heavy_check_mark: Normalizar.
+:heavy_check_mark: Normalizar
 
 <p align="justify">
   Funcionalidade extra acionada através de botão.
@@ -71,7 +71,7 @@ Você pode acessar através do link: https://challenge2-mu.vercel.app/result.htm
 
 ## Tecnologias utilizadas
 <div>
-<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=black">
-<img src="https://img.shields.io/badge/CSS-239120?style=for-the-badge&logo=css3&logoColor=black">
+<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS-239120?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </div>
