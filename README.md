@@ -12,14 +12,13 @@
 
 :small_blue_diamond: [Tecnologias utilizadas](#tecnologias-utilizadas)
 
-:small_blue_diamond: [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-... 
 
 ## Descrição do projeto 
 
 <p align="justify">
   Esse projeto foi desenvolvido como o desafio final da trilha de formação "Iniciante em Programação" do programa ONE - Oracle Next Education, uma parceria Oracle e Alura.
   O objetivo foi criar uma aplicação web para criptografar/descriptografar mensagens, dada a chave de criptografia definida no escopo do desafio e devendo aceitar apenas letras minusculas sem acentuação.
+  
 </p>
 
 ## Funcionalidades
@@ -73,6 +72,7 @@ Você pode acessar através do link: https://challenge2-mu.vercel.app/result.htm
 ## Tecnologias utilizadas
 
 Nestre projeto utilizei:
- - CSS;
- - HTML;
- - JavaScript.
+  - CSS;
+  - HTML;
+  - JavaScript.
+
