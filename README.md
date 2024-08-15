@@ -17,7 +17,7 @@
 
 <p align="justify">
   Esse projeto foi desenvolvido como o desafio final da trilha de formação "Iniciante em Programação" do programa ONE - Oracle Next Education, uma parceria Oracle e Alura.
-  O objetivo foi criar uma aplicação web para criptografar/descriptografar mensagens, dada a chave de criptografia definida no escopo do desafio e devendo aceitar apenas letras minusculas sem acentuação.
+  O objetivo foi criar uma aplicação web para criptografar/descriptografar mensagens, dada a chave de criptografia definida no escopo do desafio e devendo aceitar apenas letras minúsculas sem acentuação.
   
 </p>
 
@@ -27,7 +27,7 @@
 
 <p align="justify">
   Funções principais acionadas através de botões.
-  Convertem a mensagem inserida pelo usuario na area de entrada de acordo com a função selecianada, mostrando o resultado na area de resposta.
+  Convertem a mensagem inserida pelo usuário na área de entrada de acordo com a função selecionada, mostrando o resultado na área de resposta.
 </p>
 
 :heavy_check_mark: Verificador de entrada
@@ -48,21 +48,21 @@
 
 <p align="justify">
   Funcionalidade extra acionada através de botão.
-  Concatena o conteudo da area de tranferencia (clipboard), se for um texto ou puder ser representado como tal, ao conteudo presente na area de entrada.
+  Concatena o conteúdo da área de transferência (clipboard), se for um texto ou puder ser representado como tal, ao conteúdo presente na área de entrada.
 </p>
 
 :heavy_check_mark: Normalizar.
 
 <p align="justify">
   Funcionalidade extra acionada através de botão.
-  Função para, caso haja, converter caracteres inválidos na mensagem inserida na área de entrada pelos caracteres analogos válidos. Se não há mensagem, como na inicialização da página, ou a mensagem está de acorod com a regra o botão da função estará ocultado.
+  Função para, caso haja, converter caracteres inválidos na mensagem inserida na área de entrada pelos caracteres análogos válidos. Se não há mensagem, como na inicialização da página, ou a mensagem está de acordo com a regra o botão da função estará ocultado.  
 </p>
 
 :heavy_check_mark: Copiar 
 
 <p align="justify">
   Funcionalidade extra acionada através de botão.
-  Função para copiar a mensagem resultante do, e disponivel apenas após, acionamento das funções principais.
+  Função para copiar a mensagem resultante do, e disponível apenas após, acionamento das funções principais.
 </p>
 
 ## Como acessar
@@ -71,8 +71,7 @@ Você pode acessar através do link: https://challenge2-mu.vercel.app/result.htm
 
 ## Tecnologias utilizadas
 
-Nestre projeto utilizei:
+Neste projeto utilizei:
   - CSS;
   - HTML;
   - JavaScript.
-
