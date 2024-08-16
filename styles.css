@@ -15,6 +15,8 @@
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
+    
+    --fonte--tamanho: 20px;
 }
 
 * {
@@ -41,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     height: 70%;
-    font-size: 60px;
+    font-size: calc(3*var(--fonte--tamanho));
     font-family: var(--fonte-secundaria);
 }
 
@@ -52,7 +54,9 @@ header {
 }
 
 .menu__link {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-size: var(--fonte--tamanho);
     color: var(--cor-terciaria);
     text-decoration: none;
     font-family: var(--fonte-secundaria);
@@ -86,7 +90,7 @@ main {
     outline: none;
     color: var(--cor-secundaria);
     resize: none;
-    font-size: 20px;
+    font-size: var(--fonte--tamanho);
     text-align: justify;
     font-family: var(--fonte-primaria);
     border-radius: 24px;
@@ -94,7 +98,7 @@ main {
 }
 
 .entrada__input::placeholder {
-    font-size: 24px;
+    font-size: calc(1.2*var(--fonte--tamanho));;
     color: var(--cor-secundaria);
 }
 
@@ -114,7 +118,7 @@ main {
     border-radius: 8px;
     height: 40%;
     width: 20%;
-    font-size: 16px;
+    font-size: calc(0.8*var(--fonte--tamanho));;
 }
 
 button:hover {
@@ -136,7 +140,7 @@ button:hover {
     align-items: center;
     height: 40%;
     width: 100%;
-    font-size: 14px;
+    font-size: calc(0.7*var(--fonte--tamanho));;
 }
 
 .entrada__fundo__texto {
@@ -148,7 +152,7 @@ button:hover {
 
 .texto_alerta {
     color: var(--cor-terciaria);
-    font-size: 20px;
+    font-size: var(--fonte--tamanho);
 }
 
 .entrada__fundo__botoes {
@@ -172,13 +176,12 @@ button {
     height: 60%;
     width: 45%;
     border-radius: 16px;
-    font-size: 20px;
-
+    font-size: var(--fonte--tamanho);
 }
 
 .entrada__fundo__botao:hover {
     border: 3px solid var(--cor-secundaria);
-    font-size: 22px;
+    font-size: calc(1.1*var(--fonte--tamanho));;
 }
 
 .saida {
@@ -209,7 +212,7 @@ button {
     text-align: center;
     width: 96%;
     height: 15%;
-    font-size: 36px;
+    font-size: calc(1.8*var(--fonte--tamanho));;
 }
 
 .saida__texto {
@@ -219,7 +222,7 @@ button {
     text-align: center;
     width: 96%;
     height: 15%;
-    font-size: 24px;
+    font-size: calc(1.2*var(--fonte--tamanho));;
 }
 
 .button__desativado {
@@ -247,7 +250,7 @@ button {
     padding: 5%;
     text-align: justify;
     overflow-wrap: break-word;
-    font-size: 20px;
+    font-size: var(--fonte--tamanho);
 }
 
 .saida__botao {
@@ -263,4 +266,49 @@ button {
     box-sizing: border-box;
     height: 36%;
     width: 35%;
+}
+
+@media (max-width:1115px) {
+    :root{
+        --fonte--tamanho: 15px
+    }
+}
+
+@media (max-width:845px) {
+    :root{
+        --fonte--tamanho: 10px
+    }
+}
+
+@media (max-width:600px) {
+
+    :root{
+        --fonte--tamanho: 8px
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .entrada{
+        height: 60%;
+        width: 90%;
+    }
+
+    .entrada__input{
+        height: 70%;
+    }
+
+    .entrada__meio{
+        height: 10%;
+    }
+
+    .entrada__fundo{
+        height: 20%;
+    }
+
+    .saida{
+        height: 40%;
+        width: 90%;
+    }
 }

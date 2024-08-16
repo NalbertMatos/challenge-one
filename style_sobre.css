@@ -22,6 +22,8 @@
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
+
+    --fonte--tamanho: 20px;
 }
 
 * {
@@ -47,8 +49,9 @@ header {
 .titulo {
     display: flex;
     align-items: center;
+    text-align: left;
     height: 70%;
-    font-size: 60px;
+    font-size: calc(3*var(--fonte--tamanho));
     font-family: var(--fonte-secundaria);
 }
 
@@ -59,15 +62,18 @@ header {
 }
 
 .menu__link {
-    font-size: 20px;
+    font-size: var(--fonte--tamanho);
     color: var(--cor-terciaria);
     text-decoration: none;
     font-family: var(--fonte-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
     width: 100%;
-    height: 70%;
+    height: 85%;
     display: flex;
     flex-direction: column;
 }
@@ -82,6 +88,7 @@ main {
 
 .sobre__texto {
     width: 50%;
+    font-size: var(--fonte--tamanho);
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -133,7 +140,7 @@ h2 {
     width: 100%;
     height: 45%;
     border-radius: 16px;
-    font-size: 22px;
+    font-size: calc(1.1*var(--fonte--tamanho));
     text-decoration: none;
     gap: 2px;
     cursor: pointer;
@@ -147,13 +154,74 @@ h2 {
 .citacao{
     font-family: "pharellia", cursive;
     font-style: normal;
-    font-size: 28px;
+    font-size: calc(1.4*var(--fonte--tamanho));;
 }
 
-footer{
-    
-    height: 15%;
-    width: 100%;
-    background-color: var(--cor-primaria);
-
+@media (max-width:1115px) {
+    :root{
+        --fonte--tamanho: 15px
+    }
 }
+
+@media (max-width:845px) {
+    :root{
+        --fonte--tamanho: 10px
+    }
+}
+
+@media (max-width:600px) {
+
+    :root {
+        --fonte--tamanho: 12px
+    }
+
+    .sobre {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .sobre__texto {
+        width: 100%;
+        height: 70%;
+    }
+
+    .sobre__assets {
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .sobre__assets__imagem {
+        height: 0px;
+        width: 0px;
+    }
+
+    .sobre__assets__botoes {
+        height: 100%;
+    }
+
+    .botoes__links {
+        height: 45%;
+    }
+
+    .sobre__assets__botoes_coluna {
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-height: 700px) {
+        .titulo{
+            font-size: calc(2*var(--fonte--tamanho));
+        }
+
+        .sobre__texto {
+            height: 85%;
+        }
+
+        .sobre__assets {
+            height: 15%;
+        }
+    }
+}
+
