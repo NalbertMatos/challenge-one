@@ -16,9 +16,9 @@
   }
 
 :root {
-    --cor-primaria: #0C1844;
-    --cor-secundaria: #FDF7FA;
-    --cor-terciaria: #ea3d27;
+    --cor-primaria: #1A4862;
+    --cor-secundaria: #FFF1E6;
+    --cor-terciaria: #EA3D27;
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
@@ -175,9 +175,33 @@ h2 {
         --fonte--tamanho: 12px
     }
 
+    header{
+        height: 7%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    .titulo{
+        font-size: calc(2*var(--fonte--tamanho));
+        height: 100%;
+    }
+
+    .menu{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    main{
+        height: 91%;
+    }
+
     .sobre {
         flex-direction: column;
-        gap: 0px;
+        gap: 5%;
     }
 
     .sobre__texto {
@@ -187,7 +211,7 @@ h2 {
 
     .sobre__assets {
         width: 100%;
-        height: 20%;
+        height: 30%;
         justify-content: center;
         gap: 0px;
     }

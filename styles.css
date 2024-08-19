@@ -9,9 +9,9 @@
   }
 
 :root {
-    --cor-primaria: #0C1844;
-    --cor-secundaria: #FDF7FA;
-    --cor-terciaria: #ea3d27;
+    --cor-primaria: #1A4862;
+    --cor-secundaria: #FFF1E6;
+    --cor-terciaria: #EA3D27;
 
     --fonte-primaria: "Nunito", sans-serif;
     --fonte-secundaria: "marsek";
@@ -118,7 +118,7 @@ main {
     border-radius: 8px;
     height: 40%;
     width: 20%;
-    font-size: calc(0.8*var(--fonte--tamanho));;
+    font-size: calc(0.8*var(--fonte--tamanho));
 }
 
 button:hover {
@@ -140,7 +140,7 @@ button:hover {
     align-items: center;
     height: 40%;
     width: 100%;
-    font-size: calc(0.7*var(--fonte--tamanho));;
+    font-size: var(--fonte--tamanho);
 }
 
 .entrada__fundo__texto {
@@ -152,7 +152,7 @@ button:hover {
 
 .texto_alerta {
     color: var(--cor-terciaria);
-    font-size: var(--fonte--tamanho);
+    font-size: calc(1.1*var(--fonte--tamanho));
 }
 
 .entrada__fundo__botoes {
@@ -170,6 +170,7 @@ button {
     color: var(--cor-terciaria);
     border: 3px solid var(--cor-terciaria);
     background-color: var(--cor-secundaria);
+    text-align: center;
 }
 
 .entrada__fundo__botao{
@@ -266,6 +267,8 @@ button {
     box-sizing: border-box;
     height: 36%;
     width: 35%;
+    border-radius: 8px;
+    font-size: calc(0.8*var(--fonte--tamanho));
 }
 
 @media (max-width:1115px) {
@@ -274,20 +277,44 @@ button {
     }
 }
 
-@media (max-width:845px) {
+@media (max-width:900px) {
     :root{
         --fonte--tamanho: 10px
+    }
+
+    .saida__imagem {
+        width: 80%;
     }
 }
 
 @media (max-width:600px) {
 
     :root{
-        --fonte--tamanho: 8px
+        --fonte--tamanho: 10px
+    }
+
+    header{
+        height: 7%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        align-items: center;
+    }
+
+    .titulo{
+        font-size: calc(2*var(--fonte--tamanho));
+        height: 100%;
+    }
+
+    .menu{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     main{
         flex-direction: column;
+        height: 92.25%;
     }
 
     .entrada{
@@ -296,11 +323,18 @@ button {
     }
 
     .entrada__input{
-        height: 70%;
+        height: 75%;
     }
 
     .entrada__meio{
-        height: 10%;
+        height: 5%;
+    }
+
+    .botao_extra{
+        border-radius: 8px;
+        height: 100%;
+        width: 20%;
+        font-size: calc(0.8*var(--fonte--tamanho));;
     }
 
     .entrada__fundo{
@@ -310,5 +344,9 @@ button {
     .saida{
         height: 40%;
         width: 90%;
+    }
+
+    .saida__imagem {
+        width: 60%;
     }
 }
