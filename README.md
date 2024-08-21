@@ -6,9 +6,9 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-:small_blue_diamond: [Funcionalidades](#funcionalidades)
-
 :small_blue_diamond: [Como acessar](#como-rodar-a-aplicação-arrow_forward)
+
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
 
 :small_blue_diamond: [Tecnologias utilizadas](#tecnologias-utilizadas)
 
@@ -20,6 +20,10 @@
   O objetivo foi criar uma aplicação web para criptografar/descriptografar mensagens, dada a chave de criptografia definida no escopo do desafio e devendo aceitar apenas letras minúsculas sem acentuação.
   
 </p>
+
+## Como acessar
+  
+Você pode acessar através do link: [https://challenge2-mu.vercel.app/result.html](https://challenge2-mu.vercel.app/index.html)
 
 ## Funcionalidades
 
@@ -64,10 +68,6 @@
   Funcionalidade extra acionada através de botão.
   Função para copiar a mensagem resultante do, e disponível apenas após, acionamento das funções principais.
 </p>
-
-## Como acessar
-  
-Você pode acessar através do link: https://challenge2-mu.vercel.app/result.html
 
 ## Tecnologias utilizadas
 <div>
