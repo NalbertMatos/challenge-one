@@ -1,4 +1,4 @@
-![Icone represnetando um documento, titulo do projeto: Challenge Codificador de Texto, logo da ONE e da Alura](https://github.com/user-attachments/assets/09800434-2609-43f3-a563-c09c3e465ea0)
+![badge do projeto, titulo do projeto: Challenge Codificador de Texto, logo da ONE e da Alura](https://github.com/user-attachments/assets/6e37831a-3168-4b09-8be2-490936a5916a)
 
 > Status do Projeto: :heavy_check_mark: Concluido!
 
